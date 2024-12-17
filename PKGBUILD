@@ -11,7 +11,7 @@
 pkgname=davinci-resolve
 major_version=19
 minor_version=1
-release_version=0
+release_version=1
 pkgver=${major_version}.${minor_version}.${release_version}
 pkgrel=1
 
@@ -23,13 +23,9 @@ if [ "$pkgname" == "davinci-resolve" ]; then
   sha256sums=('e8a9f071f195d81fe94c7de3d2312ce8ef115723d68ce181f3c3bf8500505aef')
   pkgdesc='Professional A/V post-production software suite from Blackmagic Design'
   _archive_name=DaVinci_Resolve_${pkgver}_Linux
-  # Construct filename based on version
-  # Use the exact filename format
-  _archive_run_name=DaVinci_Resolve_${major_version}.${minor_version}_Linux
+  _archive_run_name=DaVinci_Resolve_${pkgver}_Linux
   conflicts=('davinci-resolve-studio' 'davinci-resolve-beta' 'davinci-resolve-studio-beta')
 elif [ "$pkgname" == "davinci-resolve-studio" ]; then
-
-
   # Variables for STUDIO edition
   _product="DaVinci Resolve Studio"
   _referid='86463718c6d1491d8d95f8b49f75c4db'
